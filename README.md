@@ -19,7 +19,7 @@
 
 | **参数名**     | **含义** | **是否必填** | **使用举例**                      |
 |-------------|--------|----------|-------------------------------|
-| metrics_url | 采集URL  | 是        | http://127.0.0.1:9443/metrics  |
+| metrics_url | 采集URL  | 是        | https://127.0.0.1:9443/metrics  |
 
 
 ### 使用指引
@@ -63,11 +63,11 @@ https://localhost:9043/ibm/console/login.do?action=secure
 #### 获取metrics
 获取metrics不需要账户和密码
 
-8.x版本端口是9080
-http://127.0.0.1:9080/metrics
+8.x版本端口是9443
+https://127.0.0.1:9443/metrics
 
-9.x版本端口是9443
-http://127.0.0.1:9443/metrics
+9.x版本端口是9080
+https://127.0.0.1:9080/metrics
 
 
 FAQ: 
