@@ -19,7 +19,7 @@
 
 | **参数名**     | **含义** | **是否必填** | **使用举例**                      |
 |-------------|--------|----------|-------------------------------|
-| metrics_url | 采集URL  | 是        | https://127.0.0.1:9443/metrics  |
+| metrics_url | 采集URL  | 是        | http://127.0.0.1:9080/metrics  |
 
 
 ### 使用指引
@@ -60,19 +60,25 @@ https://localhost:9043/ibm/console/login.do?action=secure
 - 选择 Runtime -> Currently monitored statistic set -> All ，点击OK，打开所有监控指标  ![](pic/Runtime.jpg)
 
 
+#### 查看端口  
+#### 查看HTTP端口
+
+- 导航到服务器设置:
+    在管理控制台的左侧导航栏中，展开 Servers > Server Types > WebSphere application servers。点击你想要配置的服务器（例如，server1）。  ![](pic/server1.jpg)
+
+- 进入通信设置:  
+    在服务器详细信息页面，展开Communications，再点击Ports。  ![](pic/ports.jpg)
+
+- 查看服务端口信息
+    找到WC_defaulthost 或类似的 HTTP 端口配置。默认情况下，这个端口可能被禁用或设置为一个你不期望的端口号。
+    确认或修改WC_defaulthost 端口号。例如，将它设置为 9080（或你希望的端口号）。
+    ![](pic/default_port.jpg)
+
+
 #### 获取metrics
-获取metrics不需要账户和密码
+获取metrics不需要账户和密码  
+http://127.0.0.1:9080/metrics
 
-8.x版本端口是9443
-https://127.0.0.1:9443/metrics
-
-9.x版本端口是9080
-https://127.0.0.1:9080/metrics
-
-
-FAQ: 
-1. 访问采集不到监控指标  
-先检查metics服务状态是否绿色箭头，排除服务异常问题后可尝试9080、9043、9443端口
 
 
 ### 指标简介
