@@ -1,4 +1,4 @@
-## 嘉为蓝鲸WAS监控bkpull插件使用说明
+## 嘉为蓝鲸websphere监控bkpull插件使用说明
 
 ## 使用说明
 
