@@ -49,7 +49,7 @@ https://localhost:9043/ibm/console/login.do?action=secure
 - 开始自动开始，等出现 Save 选择即可点击 ![](pic/save.jpg)
 
 
-1. 安装完成后返回 Applications -> Enterprise Applications
+2. 安装完成后返回 Applications -> Enterprise Applications
 - 查看右方视图，MetricsApp 一栏的 Application Status 是否正常，绿色箭头代表 Started，红色 × 代表Failed，出现绿色箭头才是正常部署状态 ![](pic/correct.jpg)
 
 - 如果是异常状态，可以尝试选择 MetricsApp 后再点击 Start 启动 ![](pic/fail.jpg)
@@ -59,17 +59,15 @@ https://localhost:9043/ibm/console/login.do?action=secure
 
 - 选择 Runtime -> Currently monitored statistic set -> All ，点击OK，打开所有监控指标  ![](pic/Runtime.jpg)
 
-
-#### 查看端口  
 #### 查看HTTP端口
 
-- 导航到服务器设置:
+1. 导航到服务器设置:
     在管理控制台的左侧导航栏中，展开 Servers > Server Types > WebSphere application servers。点击你想要配置的服务器（例如，server1）。  ![](pic/server1.jpg)
 
-- 进入通信设置:  
+2. 进入通信设置:  
     在服务器详细信息页面，展开Communications，再点击Ports。  ![](pic/ports.jpg)
 
-- 查看服务端口信息
+3. 查看服务端口信息
     找到WC_defaulthost 或类似的 HTTP 端口配置。默认情况下，这个端口可能被禁用或设置为一个你不期望的端口号。
     确认或修改WC_defaulthost 端口号。例如，将它设置为 9080（或你希望的端口号）。
     ![](pic/default_port.jpg)
